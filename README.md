@@ -1,79 +1,91 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# FitKO: Boxing Exercise App
 
-# Getting Started
+FitKO is a React Native application aimed at enhancing boxing exercises through the use of sensor belts. The app communicates with a sensor belt via Bluetooth and logs hits against the sensor, providing users with feedback and progress tracking.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Table of Contents
 
-## Step 1: Start the Metro Server
+1. [Features](#features)
+2. [Setup & Installation](#setup--installation)
+3. [Project Structure](#project-structure)
+4. [Contribution Guidelines](#contribution-guidelines)
+5. [License](#license)
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Features
 
-To start Metro, run the following command from the _root_ of your React Native project:
+- **User Authentication**: Users can sign up/login using Google, Apple, or by creating an account.
+- **Workout Plans & Exercises**: After logging in, users can browse different workout plans and access individual exercises.
+- **Bluetooth Integration**: Connect to an Arduino device via Bluetooth to receive feedback from the sensor belt.
+- **Progress & Profile**: Track your progress and maintain a user profile.
 
+## Setup & Installation
+
+1. Clone the repository:
 ```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
+git clone https://github.com/YourGitHubUsername/FitKO.git
 ```
 
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
+2. Navigate to the project directory and install dependencies:
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+cd FitKO
+npm install
 ```
 
-### For iOS
-
+3. To run the app:
 ```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+npx react-native run-android
+```
+or
+```bash
+npx react-native run-ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## Project Structure
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+```
+FitKO/
+|-- src/
+|   |-- navigation/
+|   |   |-- AuthNavigator.tsx
+|   |   |-- HomeNavigator.tsx
+|   |   |-- MainNavigator.tsx
+|   |   |-- RootNavigator.tsx
+|   |   |-- navigationTypes.ts
+|   |-- screens/
+|   |   |-- Auth/
+|   |   |   |-- LoginScreen.tsx
+|   |   |   |-- RegisterScreen.tsx
+|   |   |   |-- ForgotPasswordScreen.tsx
+|   |   |-- Home/
+|   |   |   |-- HomeScreen.tsx
+|   |   |   |-- WorkoutPlanScreen.tsx
+|   |   |   |-- ExerciseDescriptionScreen.tsx
+|   |   |   |-- BluetoothConnectionScreen.tsx
+|   |   |   |-- TrainingScreen.tsx
+|   |   |   |-- ResultScreen.tsx
+|   |   |   |-- SettingScreen.tsx
+|   |-- components/
+|   |-- redux/
+|   |   |-- actions/
+|   |   |-- reducers/
+|   |   |-- store.ts
+|   |-- assets/
+|   |   |-- images/
+|   |   |-- fonts/
+|   |   |-- icons/
+|
+|-- App.tsx
+|-- index.js
+|-- package.json
+```
 
-## Step 3: Modifying your App
+## Contribution Guidelines
 
-Now that you have successfully run the app, let's modify it.
+1. **Issue Creation**: Always create an issue before making a PR. Wait for the issue to be assigned to you before you start working on it.
+2. **Branching**: Always create a new branch from `main` for every issue.
+3. **Commit Messages**: Write meaningful commit messages.
+4. **PR Creation**: Keep PR titles concise. In the description, mention the issue number your PR resolves.
+5. **Code Review**: Wait for the code review and address the requested changes.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## License
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This project is licensed under [MIT] & the code source contributor `MehdiMsa`.
