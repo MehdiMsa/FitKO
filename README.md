@@ -78,6 +78,9 @@ FitKO/
 |-- package.json
 ```
 
+## Documentation
+For further details and information, you can access the **Docummentation** directory.
+
 ## Contribution Guidelines
 
 1. **Issue Creation**: Always create an issue before making a PR. Wait for the issue to be assigned to you before you start working on it.
